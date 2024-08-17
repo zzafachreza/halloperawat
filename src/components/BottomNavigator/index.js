@@ -44,9 +44,9 @@ export default function BottomNavigator({ state, descriptors, navigation }) {
 
   return (
     <View style={{
-      backgroundColor: Color.white[900], flexDirection: 'row',
-      borderTopWidth: 1,
-      borderTopColor: Color.blueGray[100],
+      backgroundColor: colors.primary, flexDirection: 'row',
+      borderTopRightRadius: 20,
+      borderTopLeftRadius: 20,
       height: 65,
     }}>
       {state.routes.map((route, index) => {
@@ -125,7 +125,7 @@ export default function BottomNavigator({ state, descriptors, navigation }) {
             <View
               style={{
 
-                color: isFocused ? colors.primary : '#919095',
+                color: isFocused ? colors.white : colors.white,
                 paddingTop: 5,
                 paddingBottom: 0,
                 fontSize: 12,
@@ -141,14 +141,14 @@ export default function BottomNavigator({ state, descriptors, navigation }) {
                   alignItems: 'center',
                 }}>
 
-                <Icon type='ionicon' name={iconName} size={24} color={isFocused ? Color.primary[900] : Color.blueGray[400]} />
-                <Text style={{
+                <Icon type='ionicon' name={isFocused ? iconName : iconName + '-outline'} size={24} color={isFocused ? colors.white : colors.white} />
+                {/* <Text style={{
                   marginTop: 4,
                   fontFamily: fonts.body2.fontFamily,
                   textAlign: 'center',
                   fontSize: 12,
                   color: isFocused ? Color.primary[900] : Color.blueGray[400]
-                }}>{Newlabel}</Text>
+                }}>{Newlabel}</Text> */}
               </View>
             </View>
           </TouchableOpacity>

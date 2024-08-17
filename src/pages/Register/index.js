@@ -41,8 +41,6 @@ export default function Register({ navigation, route }) {
         api_token: api_token,
         username: '',
         nama_lengkap: '',
-        jenis_kelamin: 'Laki-laki',
-        tanggal_lahir: moment().format('YYYY-MM-DD'),
         telepon: '',
         password: '',
         repassword: '',
@@ -100,8 +98,8 @@ export default function Register({ navigation, route }) {
                         toast.show(res.data.message, {
                             type: 'success'
                         });
-                        storeData('user', res.data.data);
-                        navigation.replace('MainApp');
+
+                        navigation.replace('Login');
 
                     }
 
@@ -125,9 +123,9 @@ export default function Register({ navigation, route }) {
     return (
         <SafeAreaView style={{
             flex: 1,
-            width:'100%',
-            height:'100%',
-            backgroundColor:colors.white
+            width: '100%',
+            height: '100%',
+            backgroundColor: colors.white
         }}>
             {/* <MyHeader title="Daftar Akun" /> */}
 
@@ -138,11 +136,11 @@ export default function Register({ navigation, route }) {
                 <View style={{
                     borderRadius: 10,
                     margin: 16,
-                    padding:20,
-                    borderWidth:1,
-                    borderColor:'#E1E1E1',
-                
-                
+                    padding: 20,
+                    borderWidth: 1,
+                    borderColor: '#E1E1E1',
+
+
                 }}>
 
                     <Text style={{
@@ -151,7 +149,7 @@ export default function Register({ navigation, route }) {
                         textAlign: 'center',
                         marginBottom: 2
                     }}>Daftar</Text>
-             
+
 
                     <MyGap jarak={24} />
                     {/* NAMA LENGKAP */}
@@ -223,7 +221,7 @@ export default function Register({ navigation, route }) {
                     />
                     <MyGap jarak={20} />
 
-         
+
                     {!loading &&
                         <>
                             <MyButton

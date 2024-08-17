@@ -39,6 +39,7 @@ import {
   InteraksiBersamaTim,
   TentangAplikasi,
   InfoEdukasiPenyakitStunting,
+  Detail,
 
 
 
@@ -65,7 +66,7 @@ const MainApp = () => {
 
 export default function Router() {
   return (
-    <Stack.Navigator initialRouteName='MainApp'>
+    <Stack.Navigator initialRouteName='Spalsh'>
       <Stack.Screen
         name="Splash"
         component={Splash}
@@ -122,8 +123,17 @@ export default function Router() {
         }}
       />
 
+      <Stack.Screen
+        name="Detail"
+        component={Detail}
+        options={{
+          headerShown: false,
 
-<Stack.Screen
+        }}
+      />
+
+
+      <Stack.Screen
         name="InfoEdukasiPenyakit"
         component={InfoEdukasiPenyakit}
         options={{
@@ -132,7 +142,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="InfoEdukasiPenyakitKanker"
         component={InfoEdukasiPenyakitKanker}
         options={{
@@ -141,7 +151,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="InfoEdukasiPenyakitStroke"
         component={InfoEdukasiPenyakitStroke}
         options={{
@@ -150,7 +160,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="InfoEdukasiPenyakitJantung"
         component={InfoEdukasiPenyakitJantung}
         options={{
@@ -158,7 +168,7 @@ export default function Router() {
 
         }}
       />
-      
+
 
       <Stack.Screen
         name="InfoEdukasiPenyakitGinjal"
@@ -168,7 +178,7 @@ export default function Router() {
 
         }}
       />
-      
+
 
       <Stack.Screen
         name="InfoEdukasiPenyakitDiabetes"
@@ -178,7 +188,7 @@ export default function Router() {
 
         }}
       />
-      
+
       <Stack.Screen
         name="InfoEdukasiPenyakitStunting"
         component={InfoEdukasiPenyakitStunting}
@@ -188,7 +198,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="InteraksiBersamaTim"
         component={InteraksiBersamaTim}
         options={{
@@ -197,7 +207,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="TentangAplikasi"
         component={TentangAplikasi}
         options={{
@@ -206,7 +216,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="TrisemesterII1"
         component={TrisemesterII1}
         options={{
@@ -215,7 +225,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="TrisemesterII2"
         component={TrisemesterII2}
         options={{
@@ -224,7 +234,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="TrisemesterIII1"
         component={TrisemesterIII1}
         options={{
@@ -234,7 +244,7 @@ export default function Router() {
       />
 
 
-<Stack.Screen
+      <Stack.Screen
         name="TrisemesterIII2"
         component={TrisemesterIII2}
         options={{
@@ -244,7 +254,7 @@ export default function Router() {
       />
 
 
-<Stack.Screen
+      <Stack.Screen
         name="TrisemesterIII3"
         component={TrisemesterIII3}
         options={{
@@ -254,7 +264,7 @@ export default function Router() {
       />
 
 
-<Stack.Screen
+      <Stack.Screen
         name="IbuBersalin"
         component={IbuBersalin}
         options={{
@@ -263,7 +273,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="IbuNifas"
         component={IbuNifas}
         options={{
@@ -273,7 +283,7 @@ export default function Router() {
       />
 
 
-<Stack.Screen
+      <Stack.Screen
         name="IbuNifasKF"
         component={IbuNifasKF}
         options={{
@@ -292,7 +302,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="TanyaJawab"
         component={TanyaJawab}
         options={{
@@ -301,7 +311,7 @@ export default function Router() {
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="Artikel"
         component={Artikel}
         options={{
@@ -311,7 +321,7 @@ export default function Router() {
       />
 
 
-<Stack.Screen
+      <Stack.Screen
         name="Kuesioner"
         component={Kuesioner}
         options={{

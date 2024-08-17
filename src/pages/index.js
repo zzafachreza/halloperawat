@@ -35,6 +35,7 @@ import InfoEdukasiPenyakitDiabetes from './InfoEdukasiPenyakit/diabetes';
 import InteraksiBersamaTim from './InteraksiBersamaTim';
 import TentangAplikasi from './TentangAplikasi';
 import InfoEdukasiPenyakitStunting from './InfoEdukasiPenyakit/stunting';
+import Detail from './InfoEdukasiPenyakit/Detail';
 
 
 
@@ -77,9 +78,10 @@ export {
   InteraksiBersamaTim,
   TentangAplikasi,
   InfoEdukasiPenyakitStunting,
+  Detail
 
 
 
-  
+
 
 };

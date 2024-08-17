@@ -79,51 +79,51 @@ export default function Login({ navigation, route }) {
   return (
     <SafeAreaView source={require('../../assets/bglogin.png')} style={{
       flex: 1,
-      width:'100%',
-      height:'100%', 
-      backgroundColor:colors.white
+      width: '100%',
+      height: '100%',
+      backgroundColor: colors.white
     }}
-    
+
     >
-        <ScrollView style={{position:"relative"}} showsVerticalScrollIndicator={false}>
+      <ScrollView style={{ position: "relative" }} showsVerticalScrollIndicator={false}>
+        <View style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: windowHeight / 2,
+        }}>
+          <Animated.Image source={require('../../assets/logo.png')} style={{
+            width: windowHeight / 3,
+            height: windowHeight / 5.6,
+            transform: [{ scale: img }],
+            marginTop: -30
+          }} />
+        </View>
+
+
+
+
+        <View style={{
+          borderRadius: 12,
+          margin: 16,
+          padding: 20,
+          marginTop: -110,
+
+        }}>
+
           <View style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: windowHeight / 2,
-          }}>
-            <Animated.Image source={require('../../assets/logo.png')} style={{
-              width: windowHeight / 3,
-              height: windowHeight / 5.6,
-              transform: [{ scale: img }],
-              marginTop:-30
-            }} />
-          </View>
-
-
-       
-   
-          <View style={{
-            borderRadius: 12,
-            margin: 16,
-            padding: 20,
-            marginTop:-110,
- 
-          }}>
-
-          <View style={{
-          borderRadius:10,
-          padding:10,
-          borderWidth:1,
-          borderColor:"#E1E1E1",
+            borderRadius: 10,
+            padding: 10,
+            borderWidth: 1,
+            borderColor: "#E1E1E1",
 
           }}>
 
-          <Text style={{
-            fontFamily:fonts.primary[400],
-            textAlign:'center',
-            color:colors.primary,
-            fontSize:MyDimensi / 2
-          }}>Masuk</Text>
+            <Text style={{
+              fontFamily: fonts.primary[400],
+              textAlign: 'center',
+              color: colors.primary,
+              fontSize: MyDimensi / 2
+            }}>Masuk</Text>
 
             <MyInput label="Username" onChangeText={x => {
               setKirim({
@@ -158,19 +158,33 @@ export default function Login({ navigation, route }) {
                 onPress={masuk}
                 title="Login"
                 Icons="log-in-outline"
-                
+
               />
             }
           </View>
-            <MyGap jarak={0} />
+          <MyGap jarak={10} />
+          <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+            <Text style={{
+              ...fonts.body3,
+              color: colors.primary,
+              textAlign: 'center'
+            }}>
+              Belum memiliki akun? <Text style={{
+                ...fonts.headline5,
+                color: colors.secondary,
+                textAlign: 'center'
+              }}>
+                Daftar disini
+              </Text>
+            </Text>
+          </TouchableOpacity>
 
-          
 
-          </View>
+        </View>
 
 
-        </ScrollView>
-  
+      </ScrollView>
+
     </ SafeAreaView>
   );
 }

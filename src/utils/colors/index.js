@@ -17,7 +17,7 @@ export const colors = {
   myback: '#E9F3F066',
   myback2: '#00000080',
   myback3: '#F4F6FF',
-  hijau: '#56BC6C',
+  hijau: '#4DC100',
   kuning: '#D7A43A',
   merah: '#B9454A',
   tekscolor: '#793C5A',
