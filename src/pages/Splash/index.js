@@ -72,15 +72,15 @@ export default function Splash({ navigation }) {
           resizeMode="contain"
           style={{
             transform: [{ scale: img }],
-            width: windowWidth / 1.4,
-            height: windowWidth / 1.4,
+            width: windowWidth - 50,
+            height: 400,
             marginTop: '30%'
 
           }}
         />
 
 
-        <ActivityIndicator style={{ marginTop: 50 }} color={colors.tekscolor} size="small" />
+        <ActivityIndicator style={{ marginTop: 50 }} color={colors.secondary} size="large" />
 
       </View>
 

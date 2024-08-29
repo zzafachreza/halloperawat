@@ -12,9 +12,11 @@ export default function InfoLayananKesehatan({ navigation, route }) {
     const [data, setData] = useState({});
     const [loading, setLoading] = useState(false);
 
-    const getDataTransaksi = () => {
+    const getDataTransaksi = (x) => {
         setLoading(true);
-        axios.post(apiURL + 'faskes').then(res => {
+        axios.post(apiURL + 'faskes', {
+            key: x
+        }).then(res => {
             console.log(res.data);
             setData(res.data);
             setTMP(res.data);
@@ -138,9 +140,11 @@ export default function InfoLayananKesehatan({ navigation, route }) {
                 <View style={{
                     flex: 1,
                     paddingHorizontal: 10,
+                    paddingTop: 10,
                 }}>
-                    {/* <View style={{
-                        position: 'relative'
+                    <View style={{
+                        position: 'relative',
+
                     }}>
                         {key.length > 0 &&
 
@@ -161,12 +165,12 @@ export default function InfoLayananKesehatan({ navigation, route }) {
                             top: 10,
                             left: 10,
                         }}>
-                            <Icon type='ionicon' name='search' color={colors.border} />
+                            <Icon type='ionicon' name='search' color={colors.primary} />
                         </View>
                         <TextInput value={key} onChangeText={x => {
                             setKey(x);
                             if (x.length > 0) {
-                                let TMPSrc = data.filter(i => i.nama_stakeholder.toLowerCase().indexOf(x.toLowerCase()) > -1);
+                                let TMPSrc = data.filter(i => i.nama_faskes.toLowerCase().indexOf(x.toLowerCase()) > -1);
                                 if (TMPSrc.length > 0) {
                                     setData(TMPSrc);
                                 }
@@ -175,15 +179,16 @@ export default function InfoLayananKesehatan({ navigation, route }) {
                             }
                         }} placeholder='Pencarian . . .' style={{
                             height: 45,
+                            // backgroundColor: colors.white,
                             borderWidth: 1,
                             marginBottom: 10,
                             borderRadius: 10,
                             paddingLeft: 40,
-                            borderColor: colors.border,
+                            borderColor: colors.primary,
                             fontFamily: fonts.secondary[600],
                             fontSize: MyDimensi / 4
                         }} />
-                    </View> */}
+                    </View>
                     <FlatList data={data} numColumns={1} showsVerticalScrollIndicator={false} renderItem={__renderItem} />
 
                 </View>

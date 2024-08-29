@@ -10,7 +10,8 @@ import {
   TouchableWithoutFeedback,
   TouchableOpacity,
   SafeAreaView,
-  ScrollView
+  ScrollView,
+  Linking
 } from 'react-native';
 import { MyButton, MyGap, MyInput } from '../../components';
 import { MyDimensi, colors, fonts, windowHeight, windowWidth, Color } from '../../utils';
@@ -163,7 +164,7 @@ export default function Login({ navigation, route }) {
             }
           </View>
           <MyGap jarak={10} />
-          <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+          {/* <TouchableOpacity onPress={() => navigation.navigate('Register')}>
             <Text style={{
               ...fonts.body3,
               color: colors.primary,
@@ -177,7 +178,7 @@ export default function Login({ navigation, route }) {
                 Daftar disini
               </Text>
             </Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
 
 
         </View>
